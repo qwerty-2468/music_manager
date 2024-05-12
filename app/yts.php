@@ -3,7 +3,7 @@
 
 if($_POST["yts-input"]){
     $keyword = str_replace(" ", "+", $_POST["yts-input"]);
-    $api_key = "AIzaSyCi0vplUQmYzdPIHkDsx98JMdLUEJQ-YBM";
+    $api_key = "google-api-key";
     $queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=3&key={$api_key}&q=" . $keyword;
     $response = file_get_contents($queryURL);
     if ($response === FALSE) {
